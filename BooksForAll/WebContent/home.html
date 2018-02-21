@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="home.css">
+<script src="LoginJavaScript.js"></script>
+<head>
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<title>Yara and Anan's ebook store</title>
+<script>
+function like(){
+ if(document.getElementById("likeIcon").style.color=="black")
+      document.getElementById("likeIcon").style.color="rgb(0, 115, 230)"; 
+   else 
+      document.getElementById("likeIcon").style.color="black";
+}
+</script>
+<script >
+function review(){
+   /*var p=document.getElementById("addRev");
+   var text=document.createElement("textarea");
+   var att1=document.createAttribute("name")
+   att1.value="review";
+   text.setAttributeNode(att1);
+    var att2=document.createAttribute("rows")
+   att2.value="4" ;
+   text.setAttributeNode(att2);
+    var att3=document.createAttribute("placeholder")
+   att3.value="Your Review..";
+   text.setAttributeNode(att3);
+   var att4=document.createAttribute("id")
+   att4.value="ana";
+   text.setAttributeNode(att4);
+   d.replaceChild(text,p);*/
+  d=document.getElementById("review");
+  if(d.style.visibility=="hidden")
+    d.style.visibility="visible";
+  else d.style.visibility="hidden";
+}
+</script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body data-ng-app="homeApp" data-ng-controller="homeCtrl">
+<div id="topBar">
+  <div class="container-fluid" style="padding-right:0px;margin-right:0px;" >
+    <div class="row">
+    <div class="col-sm-2">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Ebook Store</a>
+    </div>
+  </div>
+  <div class="col-sm-10">
+      <a href="home.html">Home</a>
+      <a href="home.html">Profile</a>
+      <a href="home.html">My books</a>
+	    <a href="firstPage.html" style="float:right;color:black"><button type="button"  class="btn">Sign Out</button></a>
+  </div>
+  </div>
+  </div>
+</div>
+
+<div class="container" style="padding-top:20px;">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+      <div id="books-list">
+        <h1 style="color:black">Our Books</h1> 
+        <!-- FIRST BOOK-->  
+        <table>
+          <tr>
+          <td><div id="bookInf">  
+                <a href="book1.htm"><img src="cover1.jpg" id="bookCover" class="img-rounded" alt="Cinque Terre" width="220" height="300"></a>
+                <p id="title"><span style="font-size:200%">Kidnapped</span>
+                <i><span>by Robert Louis Stevenson</span></i></p>
+                <p>To solve a brutal murder from 15 years ago, Serenity ventures to a quaint Amish settlement — where sinister secrets lay hidden amid the peaceful community. A satisfying cold case mystery.</p>
+                <p><span style="font-size:220%">$9.99 <span style="color:red">Sale!</span></span> <a href="buyBook.html"><button type="button" id="shop" class="btn btn-success">Shop Now</button></a></p> 
+                <p><i>Available for a limited time</i></p>
+                <span class="glyphicon glyphicon-thumbs-up" id="likeIcon" title="Add Like" onclick="like()"></span>
+                <span class="glyphicon glyphicon-send" title="Add Review" id="reviewIcon" onclick="review()"></span> 
+                <form id="review" method="post">
+                      <p id="addRev"></p>
+                      <textarea name="review" rows="2" placeholder="Your Review..."></textarea>
+                      <input type="submit" value="post"   name="submit">
+                </form>
+	       </div>
+       </td></tr>
+       <tr><td><div id="likeRev">
+                   <div class="btn-group">
+                    <div class="tooltip">likes
+                      <span class="tooltiptext">Tooltip text</span>
+                    </div>
+
+
+                      <button type="button" class="btn btn-default" data-ng-mouseover="getLikes(Kidnapped)"><div class="tooltip">likes
+                      <span class="tooltiptext">
+                      <table>
+                        <tr data-ng-repeat="like in likes" >
+                          <a id="adminLikes"><td>{{like}}</td></a>
+                        </tr>
+                      </table>
+                      </span>
+                    </div>
+                  </button>
+                      <button type="button" class="btn btn-default"><a href="#" data-toggle="collapse" data-target="#reviews">Reviews <span class="badge">10</span></a> </button>
+                    </div>
+                    
+                     <div id="reviews" class="collapse">
+                    </div>
+                </div>
+             </td>
+           </tr>
+         <!-- SECOND BOOK-->
+          <tr>
+          <td>
+            <div id="bookInf">  
+                <a href="book2.htm"><img src="cover2.jpg" id="bookCover" class="img-rounded" alt="Cinque Terre" width="220" height="300"></a>
+                <p id="title"><span style="font-size:200%"> Her Sailor</span>
+                        <i><span>by Marshall Saunders</span></i></p>
+                <p>To solve a brutal murder from 15 years ago, Serenity ventures to a quaint Amish settlement — where sinister secrets lay hidden amid the peaceful community. A satisfying cold case mystery.</p>
+                <p><span style="font-size:220%">$9.99 <span style="color:red">Sale!</span></span></p> 
+                <p><i>Available for a limited time</i></p>
+                <a href="purchasePage.html"><button type="button" style="width:100px;" class="btn btn-primary">Deal Now</button></a><br><br>
+                <a href="#">Likes <span class="badge">5</span></a>
+                <a href="#">Reviews <span class="badge">10</span></a><br>
+         </div></td></tr>
+         <tr><td><div id="likeRev">
+                   <div class="btn-group">
+                      <button type="button" id="like" onclick="like()" class="btn btn-primary"><span id="like" style="padding:0px 15px;">Like</span></button>
+                      <button type="button" class="btn btn-primary dropdown-toggle"data-toggle="dropdown"><span style="padding:0px 5px;">Add a review</span></button>
+                       <ul class="dropdown-menu">
+                        <li><textarea style="width:85%;height: 4cm;" name="descriptin" rows="5" placeholder="Your Description..."></textarea>
+                       </ul>
+                    </div>
+                </div>
+             </td></tr>
+         <!-- THIRD BOOK-->
+          <tr><td><div id="bookInf">  
+                <a href="book3.htm"><img src="cover3.jpg" id="bookCover" class="img-rounded" alt="Cinque Terre" width="220" height="300"></a>
+                <p id="title"><span style="font-size:200%">Waterways and Water Transport</span>
+                        <i><span> by J. Stephen Jeans</span></i></p>
+                <p>To solve a brutal murder from 15 years ago, Serenity ventures to a quaint Amish settlement — where sinister secrets lay hidden amid the peaceful community. A satisfying cold case mystery.</p>
+                <p><span style="font-size:220%">$9.99 <span style="color:red">Sale!</span></span></p> 
+                <p><i>Available for a limited time</i></p>
+                <a href="purchasePage.html"><button type="button" style="width:100px;" class="btn btn-primary">Deal Now</button></a><br><br>
+                <a href="#">Likes <span class="badge">5</span></a>
+                <a href="#">Reviews <span class="badge">10</span></a><br>
+                
+         </div></tr></td>
+         <tr><td><div id="likeRev">
+                   <div class="btn-group">
+                      <button type="button" id="like" onclick="like()" class="btn btn-primary"><span id="like" style="padding:0px 15px;">Like</span></button>
+                      <button type="button" class="btn btn-primary dropdown-toggle"data-toggle="dropdown"><span style="padding:0px 5px;">Add a review</span></button>
+                       <ul class="dropdown-menu">
+                        <li><textarea style="width:85%;height: 4cm;" name="descriptin" rows="5" placeholder="Your Description..."></textarea>
+                       </ul>
+                    </div>
+                </div>
+             </td></tr>
+         <!-- 4-TH BOOK-->
+         <tr><td><div id="bookInf">  
+                <a href="book4.htm"><img src="cover4.jpg" id="bookCover" class="img-rounded" alt="Cinque Terre" width="220" height="300"></a>
+                <p id="title"><span style="font-size:200%">The Magical Mimics in Oz</span>
+                        <i><span>by Jack Sbow</span></i></p>
+                <p>To solve a brutal murder from 15 years ago, Serenity ventures to a quaint Amish settlement — where sinister secrets lay hidden amid the peaceful community. A satisfying cold case mystery.</p>
+                <p><span style="font-size:220%">$9.99 <span style="color:red">Sale!</span></span></p> 
+                <p><i>Available for a limited time</i></p>
+                <a href="purchasePage.html"><button type="button" style="width:100px;" class="btn btn-primary">Deal Now</button></a><br><br>
+                <a href="#">Likes <span class="badge">5</span></a>
+                <a href="#">Reviews <span class="badge">10</span></a><br>
+         </div></tr></td>
+         <tr><td><div id="likeRev">
+                   <div class="btn-group">
+                      <button type="button" id="like" onclick="like()" class="btn btn-primary"><span id="like" style="padding:0px 15px;">Like</span></button>
+                      <button type="button" class="btn btn-primary dropdown-toggle"data-toggle="dropdown"><span style="padding:0px 5px;">Add a review</span></button>
+                       <ul class="dropdown-menu">
+                        <li><textarea style="width:85%;height: 4cm;" name="descriptin" rows="5" placeholder="Your Description..."></textarea>
+                       </ul>
+                    </div>
+                </div>
+             </td></tr>
+         <!-- 5-TH BOOK-->
+         <tr><td><div id="bookInf">  
+                <a href="book5.htm"><img src="cover5.jpg" id="bookCover" class="img-rounded" alt="Cinque Terre" width="220" height="300"></a>
+                <p id="title"><span style="font-size:200%">In het Hol van den Leeuw</span>
+                        <i><span>by J. Fabius</span></i></p>
+                <p>To solve a brutal murder from 15 years ago, Serenity ventures to a quaint Amish settlement — where sinister secrets lay hidden amid the peaceful community. A satisfying cold case mystery.</p>
+                <p><span style="font-size:220%">$9.99 <span style="color:red">Sale!</span></span></p> 
+                <p><i>Available for a limited time</i></p>
+                <a href="purchasePage.html"><button type="button" style="width:100px;" class="btn btn-primary">Deal Now</button></a><br><br>
+                <a href="#">Likes <span class="badge">5</span></a>
+                <a href="#">Reviews <span class="badge">10</span></a><br>
+                </div>
+         </div></tr></td>
+         <tr><td><div id="likeRev">
+                   <div class="btn-group">
+                      <button type="button" id="like" onclick="like()" class="btn btn-primary"><span id="like" style="padding:0px 15px;">Like</span></button>
+                      <button type="button" class="btn btn-primary dropdown-toggle"data-toggle="dropdown"><span style="padding:0px 5px;">Add a review</span></button>
+                       <ul class="dropdown-menu">
+                        <li><textarea style="width:85%;height: 4cm;" name="descriptin" rows="5" placeholder="Your Description..."></textarea>
+                       </ul>
+                    </div>
+                </div>
+             </td></tr>
+         <!-- 6-TH BOOK-->
+         <tr><td><div id="bookInf">  
+                <a href="book6.htm"><img src="cover6.jpg" id="bookCover" class="img-rounded" alt="Cinque Terre" width="220" height="300"></a>
+                <p id="title"><span style="font-size:200%">JAQUELINA</span>
+                        <i><span>by MRS. ALEX. McVEIGH MILLER. </span></i></p>
+                <p>To solve a brutal murder from 15 years ago, Serenity ventures to a quaint Amish settlement — where sinister secrets lay hidden amid the peaceful community. A satisfying cold case mystery.</p>
+                <p><span style="font-size:220%">$9.99 <span style="color:red">Sale!</span></span></p> 
+                <p><i>Available for a limited time</i></p>
+                <a href="purchasePage.html"><button type="button" style="width:100px;" class="btn btn-primary">Deal Now</button></a><br><br>
+                <a href="#">Likes <span class="badge">5</span></a>
+                <a href="#">Reviews <span class="badge">10</span></a><br>
+         </div></tr></td>
+         <tr><td><div id="likeRev">
+                   <div class="btn-group">
+                      <button type="button" id="like" onclick="like()" class="btn btn-primary"><span id="like" style="padding:0px 15px;">Like</span></button>
+                      <button type="button" class="btn btn-primary dropdown-toggle"data-toggle="dropdown"><span style="padding:0px 5px;">Add a review</span></button>
+                       <ul class="dropdown-menu">
+                        <li><textarea style="width:85%;height: 4cm;" name="descriptin" rows="5" placeholder="Your Description..."></textarea>
+                       </ul>
+                    </div>
+                </div>
+             </td></tr>
+         <!-- 7-TH BOOK-->
+         <tr><td><div id="bookInf">  
+                <a href="book7.htm"><img src="cover7.jpg" id="bookCover" class="img-rounded" alt="Cinque Terre" width="220" height="300"></a>
+                <p id="title"><span style="font-size:200%">The Life and Times of Alfred the Great</span>
+                        <i><span>by Charles Plumme</span></i></p>
+                <p>To solve a brutal murder from 15 years ago, Serenity ventures to a quaint Amish settlement — where sinister secrets lay hidden amid the peaceful community. A satisfying cold case mystery.</p>
+                <p><span style="font-size:220%">$9.99 <span style="color:red">Sale!</span></span></p> 
+                <p><i>Available for a limited time</i></p>
+                <a href="purchasePage.html"><button type="button" style="width:100px;" class="btn btn-primary">Deal Now</button></a><br><br>
+                <a href="#">Likes <span class="badge">5</span></a>
+                <a href="#">Reviews <span class="badge">10</span></a><br>
+         </div></tr></td>
+         <tr><td><div id="likeRev">
+                   <div class="btn-group">
+                      <button type="button" id="like" onclick="like()" class="btn btn-primary"><span id="like" style="padding:0px 15px;">Like</span></button>
+                      <button type="button" class="btn btn-primary dropdown-toggle"data-toggle="dropdown"><span style="padding:0px 5px;">Add a review</span></button>
+                       <ul class="dropdown-menu">
+                        <li><textarea style="width:85%;height: 4cm;" name="descriptin" rows="5" placeholder="Your Description..."></textarea>
+                       </ul>
+                    </div>
+                </div>
+             </td></tr>
+         <!-- 8-TH BOOK-->
+         <tr><td><div id="bookInf">  
+                <a href="book8.htm"><img  src="cover8.jpg" id="bookCover" class="img-rounded" alt="Cinque Terre" width="220" height="300"></a>
+                <p id="title"><span style="font-size:200%">Kidnapped</span>
+                        <i><span>By Robert Louis Stevenson</span></i></p>
+                <p>To solve a brutal murder from 15 years ago, Serenity ventures to a quaint Amish settlement — where sinister secrets lay hidden amid the peaceful community. A satisfying cold case mystery.</p>
+                <p><span style="font-size:220%">$9.99 <span style="color:red">Sale!</span></span></p> 
+                <p><i>Available for a limited time</i></p>
+                <a href="purchasePage.html"><button type="button" style="width:100px;" class="btn btn-primary">Deal Now</button></a><br><br>
+                <a href="#">Likes <span class="badge">5</span></a>
+                <a href="#">Reviews <span class="badge">10</span></a><br>
+         </div></tr></td>
+         <!-- 9-TH BOOK--> 
+         <tr><td><div id="bookInf">  
+                <a href="book9.htm"><img src="cover9.jpg" id="bookCover" class="img-rounded" alt="Cinque Terre" width="220" height="300"></a>
+                <p id="title"><span style="font-size:200%">Kidnapped</span>
+                        <i><span>By Robert Louis Stevenson</span></i></p>
+                <p>To solve a brutal murder from 15 years ago, Serenity ventures to a quaint Amish settlement — where sinister secrets lay hidden amid the peaceful community. A satisfying cold case mystery.</p>
+                <p><span style="font-size:220%">$9.99 <span style="color:red">Sale!</span></span></p> 
+                <p><i>Available for a limited time</i></p>
+                <a href="purchasePage.html"><button type="button" style="width:100px;" class="btn btn-primary">Deal Now</button></a><br><br>
+                <a href="#">Likes <span class="badge">5</span></a>
+                <a href="#">Reviews <span class="badge">10</span></a><br>
+         </div></tr></td>
+         <tr><td><div id="likeRev">
+                   <div class="btn-group">
+                      <button type="button" id="like" onclick="like()" class="btn btn-primary"><span id="like" style="padding:0px 15px;">Like</span></button>
+                      <button type="button" class="btn btn-primary dropdown-toggle"data-toggle="dropdown"><span style="padding:0px 5px;">Add a review</span></button>
+                       <ul class="dropdown-menu">
+                        <li><textarea style="width:85%;height: 4cm;" name="descriptin" rows="5" placeholder="Your Description..."></textarea>
+                       </ul>
+                    </div>
+                </div>
+             </td></tr>
+         <!-- 10-TH BOOK-->
+         <tr><td><div id="bookInf">  
+                <a href="book10.htm"><img src="cover10.jpg" id="bookCover" class="img-rounded" alt="Cinque Terre" width="220" height="300"></a>
+                <p id="title"><span style="font-size:200%">Kidnapped</span>
+                        <i><span>By Robert Louis Stevenson</span></i></p>
+                <p>To solve a brutal murder from 15 years ago, Serenity ventures to a quaint Amish settlement — where sinister secrets lay hidden amid the peaceful community. A satisfying cold case mystery.</p>
+                <p><span style="font-size:220%">$9.99 <span style="color:red">Sale!</span></span></p> 
+                <p><i>Available for a limited time</i></p>
+                <a href="purchasePage.html"><button type="button" style="width:100px;" class="btn btn-primary">Deal Now</button></a><br><br>
+                <a href="#">Likes <span class="badge">5</span></a>
+                <a href="#">Reviews <span class="badge">10</span></a><br>
+         </div></tr></td>
+         <tr><td><div id="likeRev">
+                   <div class="btn-group">
+                      <button type="button" id="like" onclick="like()" class="btn btn-primary"><span id="like" style="padding:0px 15px;">Like</span></button>
+                      <button type="button" class="btn btn-primary dropdown-toggle"data-toggle="dropdown"><span style="padding:0px 5px;">Add a review</span></button>
+                       <ul class="dropdown-menu">
+                        <li><textarea style="width:85%;height: 4cm;" name="descriptin" rows="5" placeholder="Your Description..."></textarea>
+                       </ul>
+                    </div>
+                </div>
+             </td></tr>
+       </table>
+    </div>
+    </div>
+    </div> 
+</div>
+<div class="container" id="bottomBar">
+  <div class="row">
+    <div class="col-sm-3">
+      <h3> EBOOK STORE</h3>
+    </div>
+    <div class="col-sm-3">
+      <h3>COMPANY</h3>
+      <ul>
+        <li><a>About</a></li>
+        <li><a>Careers</a></li>
+        <li><a>For the Press</a></li>
+        <li><a>Privacy & Terms</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h3>READERS</h3>
+      <ul>
+        <li><a>In the News</a></li>
+        <li><a>Free Ebooks</a></li>
+        <li><a>Free Kindle Books</a></li>
+        <li><a>Invite Your Friends</a></li>
+        <li><a>The Web Blog</a></li>
+        <li><a>Help</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h3>CPUBLISHERS & AUTHORS</h3>
+       <ul>
+        <li><a>Partners Overview</a></li>
+        <li><a>Submit New Deal</a></li>
+        <li><a>Partner Dashboard</a></li>
+        <li><a>Claim an Author Profile</a></li>
+        <li><a>BookBub Partners Blog</a></li>
+        <li><a>Partner FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div><a><p class="small">© 2018 EBookStore.  All rights reserved.</p></a></div>
+  </div>
+</div>
+
+<div id="overlay" onclick="off()">
+  <div id="text">Overlay Text</div>
+</div>
+</body>
+ </html>

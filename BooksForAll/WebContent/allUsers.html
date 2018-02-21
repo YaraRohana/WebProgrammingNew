@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html >
+<link rel="stylesheet" type="text/css" href="allUsers.css">
+<head>
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="bootstrap-3.3.7-dist\jquery\query-3.2.1.js"></script>
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist\angular\angular.min.js"></script>
+	<title>Yara and Anan's ebook store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</script>
+</head>
+<body data-ng-app="myApp" data-ng-controller="myCtrl">
+<div id="topBar">
+  <div class="container-fluid" style="padding-right:0px;margin-right:0px;" >
+    <div class="row">
+    <div class="col-sm-2">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Ebook Store</a>
+    </div>
+  </div>
+  <div class="col-sm-10">
+      <a href="home.html">Home</a>
+      <a href="home.html">Profile</a>
+      <a href="home.html">My books</a>
+      <a href="firstPage.html" style="float:right;color:black"><button type="button"  class="btn">Sign Out</button></a>
+  </div>
+  </div>
+  </div>
+</div>
+<div >
+  <div class="row">
+    <div class="col-sm-12">
+    <div class="table-responsive">
+      <table class="table table-condensed" style="margin-top:150px;">
+      <tr>
+							<th>Username</th>
+							<th>Email</th>
+							<th>Password</th>
+							<th>Nickname</th>
+							<th>Phone Number</th>
+							<th>City</th>
+							<th>Street</th>
+							<th>Apartment Number</th>
+							<th>Postal Code</th>
+							<th>Description</th>
+							<th>Image</th>
+							<th>Delete User</th>
+	</tr>
+            <tr ng-repeat="x in users">
+               <td>{{x.username}}</td>
+               <td>{{x.email}}</td>
+               <td>{{x.password}}</td>
+               <td>{{x.nickname}}</td>
+               <td>{{x.phoneNumber}}</td>
+               <td>{{x.cityName}}</td>
+               <td>{{x.streetName}}</td>
+               <td>{{x.apartmentNumber}}</td>
+               <td>{{x.postalCode}}</td>
+               <td>{{x.description}}</td>
+               <td><img width=20 height=20 data-ng-src="{{x.imageURL}}"></td>    
+             <td><button type="button" class="btn btn-danger" data-ng-click="deleteUser(x.username)">Del</button></td>
+            </tr>
+          </table>
+          </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="bottomBar">
+  <div class="row">
+    <div class="col-sm-3">
+      <h3> EBOOK STORE</h3>
+    </div>
+    <div class="col-sm-3">
+      <h3>COMPANY</h3>
+      <ul>
+        <li><a>About</a></li>
+        <li><a>Careers</a></li>
+        <li><a>For the Press</a></li>
+        <li><a>Privacy & Terms</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h3>READERS</h3>
+      <ul>
+        <li><a>In the News</a></li>
+        <li><a>Free Ebooks</a></li>
+        <li><a>Free Kindle Books</a></li>
+        <li><a>Invite Your Friends</a></li>
+        <li><a>The Web Blog</a></li>
+        <li><a>Help</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h3>CPUBLISHERS & AUTHORS</h3>
+       <ul>
+        <li><a>Partners Overview</a></li>
+        <li><a>Submit New Deal</a></li>
+        <li><a>Partner Dashboard</a></li>
+        <li><a>Claim an Author Profile</a></li>
+        <li><a>BookBub Partners Blog</a></li>
+        <li><a>Partner FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div><a><p class="small">© 2018 EBookStore.  All rights reserved.</p></a></div>
+  </div>
+</div>
+<script src="allUsers.js"></script>
+</body>
+</html>

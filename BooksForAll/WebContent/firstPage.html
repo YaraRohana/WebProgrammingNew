@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html data-ng-app="firstPage">
+<link rel="stylesheet" type="text/css" href="firstPage.css">
+<script src="LoginJavaScript.js"></script>
+<head>
+<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="bootstrap-3.3.7-dist\jquery\query-3.2.1.js"></script>
+<script type="text/javascript" src="bootstrap-3.3.7-dist\angular\angular.min.js"></script>
+<title>Yara and Anan's ebook store</title>
+</head>
+ 
+<body data-ng-controller="myCtrl">
+
+<div id="topBar">
+  <div class="container-fluid">
+    <div class="row">
+    
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Ebook Store</a>
+    </div>
+          <div style="padding-top:15px;padding-bottom:15px;">
+            <a href="forget_password" id="forgetPass">forget password?</a>
+                <form  action="#" method="post" name="logInForm" data-ng-app="logInApp" data-ng-controller="logInCtrl">
+                  <a  href="home.html"><input type="submit" value="Log in" style=" float:right;padding:0px 5px;width:50px;"></a>
+                    <input type="password" class="login" maxlength=8 data-ng-model="passwordLI" style="float:right;" placeholder="Password" required>
+                    <input type="text" class="login" maxlength=10 data-ng-model="usernameLI" placeholder="Username" style="float:right;" required>
+              </form>
+          </div>
+ 
+  </div>
+  </div>
+</div>
+   <!-- <ul>
+      <li><p><i>Ebook Store</i></p></li>
+      <li style="float:right">
+        <ul style="padding-bottom:0px">
+          <div style="padding-top:15px;padding-bottom:15px;">
+                <li><form  action="/Log_in_page.php" method="get">
+                    <li><input type="text" class="login" maxlength=10 name="uNameLI" placeholder="Username" required>
+                    <li><input type="password" class="login" maxlength=8 name="passLI" placeholder="Password" required>
+                    <li><a style="padding:0px;" href="home.html"><input class="btn-sm" style="padding:0px 5px;font-size:80%;width:20%;" class="login" type="submit" value="Log in"><a>
+                    </form>
+              <a href="forget_password">forget password?</a>
+          </div>
+        </ul>
+      
+      </li>
+    </ul>-->
+<div class="container-fluid" >
+<div class="row" style="margin:auto;">
+<div class="col-sm-2"> </div>
+<div class="col-sm-8" > 
+ <div class="form">
+      <h2 style="color:white"> Be different of what you read </h2>
+      <h4 style="padding-left:20%;color:white">Get started - it's free.</h4>
+      <div class="signup"> 
+          <form action="#" method="post" name="signUpForm">
+
+
+              <input type="text"  maxlength=10 name="username" data-ng-model="username" placeholder="Your Username" title="username maxlenght 10 characters"required><br>
+
+              <input type="email" name="email" data-ng-model="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="the email must include @" required><br>
+
+
+              <input type="password" maxlength=8 name="password" data-ng-model="password" placeholder="Your Password" title="password maxlength 8 characters"required><br>
+
+
+              <input type="text"  maxlength=20 name="nickname" data-ng-model="nickname" placeholder="Your Nickname" title="nickname maxlength 20 characters"required><br>
+
+
+              <div style="margin: 5px 12%;">
+                  <input type="text" class="address" name="cityName" data-ng-model="cityName" pattern="[a-zA-Z\s]{3,}"  placeholder="Your City" title="More than 3 characters." required>
+                   <input type="text" class="address" name="streetName" data-ng-model="streetName"  pattern="[a-zA-Z\s]{3,}"  placeholder="Street Name" title="More than 3 characters." required><br>
+                  <input type="text" class="address" name="apartmentNumber" data-ng-model="apartmentNumber"  pattern="[0-9]{1,}"  placeholder="Apartment Num" required>
+                  <input type="text" class="address" name="postalCode" data-ng-model="postalCode"  pattern="[0-9]{7}"   placeholder="Postal Code" title="postalcode must be 7 characters" required><br>
+              </div>
+
+
+              <select size=1 data-ng-model="telStart" id="telStart" name="telStart">
+                <option >02</option>
+                <option >03</option>
+                <option >04</option>
+                <option >08</option>
+                <option >09</option>
+                <option >050</option>
+                <option >051</option>
+                <option >052</option>
+                <option >053</option>
+                <option >054</option>
+                <option >055</option>
+                <option >056</option>
+                <option >058</option>
+                <option >059</option>
+              </select>
+
+              <input type="text" maxlength=7 pattern="[0-9]{7}" name="phoneNumber" data-ng-model="phoneNumber" placeholder="Your Phone Number.." id="phoneNum" title="phone number must be 7 characters" required><br>
+
+              <a style="margin-left:22%" href="home.html"><input type="submit" id="submit" value="Join now"></a>
+
+          </form>
+        </div>
+</div> <!-- /form -->
+</div>
+<div class="col-sm-2"> </div>
+</div>
+</div>
+<script src="firstPage.js"></script>
+</body>
+</html>

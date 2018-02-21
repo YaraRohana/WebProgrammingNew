@@ -1,0 +1,35 @@
+html {
+	overflow-y: scroll; 
+}
+body {
+   /*background-image: url("trinity.jpg");
+   background-repeat: no-repeat;
+    background-size:cover;*/
+   background-color:#D3D3D3;
+   width: 100%;
+}
+#bottomBar{
+  overflow: hidden;
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+  color:white;
+  padding: 10px 20%;
+  margin-top: 100px;
+}
+#topBar{
+	background-color:black;
+	padding:0;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	margin-bottom: 100px;
+}
+#topBar a {
+  display: block;
+  float:left;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+}

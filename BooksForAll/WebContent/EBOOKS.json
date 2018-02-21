@@ -1,0 +1,72 @@
+[
+	{
+		"name": "Her Sailor",
+		"price": "9.99",
+		"description": "aa",
+		"likes": "10",
+		"imageURL": "cover2.jpg"
+	},
+	{
+		"name": "Campaign Round Liege",
+		"price": "9.99",
+		"description": "aa",
+		"likes": "10",
+		"imageURL": "cover8.jpg"
+	},
+	{
+		"name": "Kidnapped",
+		"price": "9.99",
+		"description": "aa",
+		"likes": "10",
+		"imageURL": "cover1.jpg"
+	},
+	{
+		"name": "Waterways and Water Transport",
+		"price": "9.99",
+		"description": "aa",
+		"likes": "10",
+		"imageURL": "cover3.jpg"
+	},
+	{
+		"name": "The Magical Mimics in Oz",
+		"price": "9.99",
+		"description": "aa",
+		"likes": "10",
+		"imageURL": "cover4.jpg"
+	},
+	{
+		"name": "In het Hol van den Leeuw",
+		"price": "9.99",
+		"description": "aa",
+		"likes": "10",
+		"imageURL": "cover5.jpg"
+	},
+	{
+		"name": "Jaquelina",
+		"price": "9.99",
+		"description": "aa",
+		"likes": "10",
+		"imageURL": "cover6.jpg"
+	},
+	{
+		"name": "The Life and Times of Alfred the Great",
+		"price": "9.99",
+		"description": "aa",
+		"likes": "10",
+		"imageURL": "cover7.jpg"
+	},
+	{
+		"name": "The Book of the Ocean",
+		"price": "9.99",
+		"description": "aa",
+		"likes": "10",
+		"imageURL": "cover9.jpg"
+	},
+	{
+		"name": "J",
+		"price": "9.99",
+		"description": "aa",
+		"likes": "10",
+		"imageURL": "ImageA"
+	}
+]

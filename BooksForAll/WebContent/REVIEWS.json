@@ -1,0 +1,26 @@
+[
+	{
+		"bookName": "Her Sailor",
+		"username": "YaraRohana",
+		"description": "Very interesting book,highly recommended.It's a love story with a twist",
+		"approved": "true"
+	},	
+	{
+		"bookName": "Her Sailor",
+		"username": "AnanSbeit",
+		"description": "Very cheesy book, didn't like it much, I think it's too long",
+		"approved": "true"
+	},
+	{
+		"bookName": "Kidnapped",
+		"username": "YaraRohana",
+		"description": "Pretty Okay, not fascinating, but I'll recomment it to a friend",
+		"approved": "false"	
+	},
+	{
+		"bookName": "Kidnapped",
+		"username": "AnanSbeit",
+		"description": "Love this book, I think it's great",
+		"approved": "false"
+	}
+]
